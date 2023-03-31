@@ -41,11 +41,15 @@ const uniqueId = (length = 13) => {
     return result;
 };
 
+const isInvalidDate = (dateString) => new Date(dateString).toString() === 'Invalid Date'
+const isValidDate = (dateString) => new Date(dateString).toString() !== 'Invalid Date'
 
 module.exports = {
     successResponse,
     errorResponse,
     validateEmail,
     validateFields,
-    uniqueId
+    uniqueId,
+    isInvalidDate,
+    isValidDate
 }

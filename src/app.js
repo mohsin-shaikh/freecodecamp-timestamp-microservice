@@ -20,7 +20,7 @@ app.use(helmet()) // secure apps by setting various HTTP headers
 // Health Check
 app.get('/', ping)
 // Create Payment Link
-app.post('/api/:date', getTimeStamp)
+app.get('/api/:date?', getTimeStamp)
 
 // Start express on the defined port
 app.listen(
