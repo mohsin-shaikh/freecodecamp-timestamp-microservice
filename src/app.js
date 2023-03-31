@@ -1,4 +1,5 @@
 const express = require('express')
+var cors = require('cors')
 const helmet = require('helmet')
 const ping = require('./api/ping')
 const { port } = require('./config/vars')
@@ -11,6 +12,7 @@ const app = express()
 const PORT = port
 
 // Common Middleware
+app.use(cors())
 app.use(express.json()) // JSON parsing
 app.use(helmet()) // secure apps by setting various HTTP headers
 

@@ -29,7 +29,7 @@ const getTimeStamp = (req, res) => {
             utc: localDate.toGMTString() 
         })
     } else {
-        return res.status(400).json({
+        return res.status(200).json({
             error: 'Invalid Date'
         })
     }
